@@ -1,0 +1,76 @@
+# view res/layout/activity_track_map.xml #generated:34
+-keep class com.google.android.gms.maps.MapFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class com.jman.trackrate.FullScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.jman.trackrate.MainMenuActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.jman.trackrate.SaveTrackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:88
+-keep class com.jman.trackrate.ShowCommentsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.jman.trackrate.ShowTracksActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.jman.trackrate.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class com.jman.trackrate.TrackDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:64
+-keep class com.jman.trackrate.TrackMapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.jman.trackrate.TrackRateApp { <init>(...); }
+
+# onClick res/layout/details_buttons_view.xml #generated:10
+-keepclassmembers class * { *** getDirections(...); }
+
+# onClick res/layout/activity_main_menu.xml #generated:59
+# onClick res/layout/activity_main_menu_old.xml #generated:60
+-keepclassmembers class * { *** logOut(...); }
+
+# onClick res/layout/tracking_buttons_view.xml #generated:29
+-keepclassmembers class * { *** pauseTracking(...); }
+
+# onClick res/layout/activity_track_details.xml #generated:150
+-keepclassmembers class * { *** rateOrDeleteTrack(...); }
+
+# onClick res/layout/help_overylay_layout.xml #generated:2
+-keepclassmembers class * { *** removeHelp(...); }
+
+# onClick res/layout/activity_save_track.xml #generated:117
+-keepclassmembers class * { *** saveTrackToCloud(...); }
+
+# onClick res/layout/activity_main_menu.xml #generated:97
+# onClick res/layout/activity_main_menu_old.xml #generated:96
+-keepclassmembers class * { *** showAllTracks(...); }
+
+# onClick res/layout/activity_track_details.xml #generated:160
+-keepclassmembers class * { *** showComments(...); }
+
+# onClick res/layout/activity_track_map.xml #generated:40
+-keepclassmembers class * { *** showFullImage(...); }
+
+# onClick res/layout/activity_main_menu.xml #generated:84
+# onClick res/layout/activity_main_menu_old.xml #generated:84
+-keepclassmembers class * { *** showMyTracks(...); }
+
+# onClick res/layout/activity_track_details.xml #generated:140
+-keepclassmembers class * { *** showTrackOnMap(...); }
+
+# onClick res/layout/activity_main_menu.xml #generated:71
+# onClick res/layout/activity_main_menu_old.xml #generated:72
+-keepclassmembers class * { *** startTracking(...); }
+
+# onClick res/layout/tracking_buttons_view.xml #generated:9
+-keepclassmembers class * { *** stopTracking(...); }
+
+# onClick res/layout/tracking_buttons_view.xml #generated:19
+-keepclassmembers class * { *** takePhoto(...); }
+

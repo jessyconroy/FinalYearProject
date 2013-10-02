@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tvCommentListUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="UserName"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/ListBody" />
+
+        <TextView
+            android:id="@+id/tvCommentListDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="Date"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/ListItemSmall" />
+
+        <RatingBar
+            android:id="@+id/commentListRatingBar"
+            style="@android:style/Widget.Holo.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvCommentListUserName"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/tvCommentListUserName"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="1" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCommentListCommentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Comment Text"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/ListBody" />
+
+</LinearLayout>

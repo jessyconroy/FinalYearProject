@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detailsBtnFragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blue_base"
+    android:orientation="vertical" >
+
+
+        <ImageButton
+            android:id="@+id/btnGetDirections"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/navigation"
+            android:onClick="getDirections"
+            android:text="Get Directions" />
+
+</LinearLayout>

@@ -1,0 +1,282 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://trackrate.appspot.com/_ah/api",
+  "name" : "tracksendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://trackrate.appspot.com/_ah/spi",
+    "deadline" : 10.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "jman.com",
+  "ownerName" : "jman.com",
+  "packagePath" : "trackrate",
+  "methods" : {
+    "tracksendpoint.tracks.setRating" : {
+      "path" : "tracks/rating/",
+      "httpMethod" : "PUT",
+      "scopes" : [ ],
+      "audiences" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com" ],
+      "clientIds" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com", "450884998881-ho9m30s9fapkfmfdkcmk8516r9dg8f02.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jman.trackrate.TracksEndpoint.setTrackRating",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tracksendpoint.tracks.delete" : {
+      "path" : "tracks/{id}",
+      "httpMethod" : "DELETE",
+      "scopes" : [ ],
+      "audiences" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com" ],
+      "clientIds" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com", "450884998881-ho9m30s9fapkfmfdkcmk8516r9dg8f02.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jman.trackrate.TracksEndpoint.removeTracks",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tracksendpoint.tracks.insert" : {
+      "path" : "tracks",
+      "httpMethod" : "POST",
+      "scopes" : [ ],
+      "audiences" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com" ],
+      "clientIds" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com", "450884998881-ho9m30s9fapkfmfdkcmk8516r9dg8f02.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jman.trackrate.TracksEndpoint.insertTracks",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tracksendpoint.tracks.list" : {
+      "path" : "tracks",
+      "httpMethod" : "GET",
+      "scopes" : [ ],
+      "audiences" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com" ],
+      "clientIds" : [ "450884998881-k1q55viq57mq5srcc0g0um31rvt5odb9.apps.googleusercontent.com", "450884998881-ho9m30s9fapkfmfdkcmk8516r9dg8f02.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jman.trackrate.TracksEndpoint.list",
+      "request" : {
+        "parameters" : {
+          "limit" : {
+            "type" : "string",
+            "required" : false
+          },
+          "listAllTracks" : {
+            "type" : "boolean",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Tracks" : {
+        "id" : "Tracks",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "user" : {
+            "$ref" : "User"
+          },
+          "dateUpload" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "trackName" : {
+            "type" : "string"
+          },
+          "trackDescription" : {
+            "type" : "string"
+          },
+          "route" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "GeoPt"
+            }
+          },
+          "distanceTravelled" : {
+            "type" : "number"
+          },
+          "trackRating" : {
+            "type" : "integer"
+          },
+          "trackImage" : {
+            "type" : "string",
+            "format" : "byte"
+          },
+          "ratingCount" : {
+            "type" : "integer"
+          },
+          "commentset" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Comments"
+            }
+          }
+        }
+      },
+      "User" : {
+        "id" : "User",
+        "type" : "object",
+        "properties" : {
+          "email" : {
+            "type" : "string"
+          },
+          "authDomain" : {
+            "type" : "string"
+          },
+          "userId" : {
+            "type" : "string"
+          },
+          "federatedIdentity" : {
+            "type" : "string"
+          },
+          "nickname" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GeoPt" : {
+        "id" : "GeoPt",
+        "type" : "object",
+        "properties" : {
+          "latitude" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "longitude" : {
+            "type" : "number",
+            "format" : "float"
+          }
+        }
+      },
+      "Comments" : {
+        "id" : "Comments",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "$ref" : "Key"
+          },
+          "user" : {
+            "$ref" : "User"
+          },
+          "dateOfComment" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "comment" : {
+            "type" : "string"
+          },
+          "commentRating" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "complete" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "TracksCollection" : {
+        "id" : "TracksCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Tracks"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.jman.trackrate.TracksEndpoint.setTrackRating" : {
+        "request" : {
+          "$ref" : "Tracks"
+        },
+        "response" : {
+          "$ref" : "Tracks"
+        }
+      },
+      "com.jman.trackrate.TracksEndpoint.removeTracks" : {
+        "response" : {
+          "$ref" : "Tracks"
+        }
+      },
+      "com.jman.trackrate.TracksEndpoint.insertTracks" : {
+        "request" : {
+          "$ref" : "Tracks"
+        },
+        "response" : {
+          "$ref" : "Tracks"
+        }
+      },
+      "com.jman.trackrate.TracksEndpoint.list" : {
+        "response" : {
+          "$ref" : "TracksCollection"
+        }
+      }
+    }
+  }
+}

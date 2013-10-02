@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_desc"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+        <View style="@style/TitleBarSpring" />
+
+        <ProgressBar
+            android:id="@+id/title_refresh_progress"
+            style="@style/TitleBarProgressIndicator"
+            android:visibility="gone" />
+
+        <ImageView
+            style="@style/TitleBarSeparator"
+            android:contentDescription="@string/title_separator_desc" />
+        
+        
+
+        
+    </LinearLayout>
+  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        
+        <TextView
+        android:id="@+id/tvListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/DialogHeader"
+        android:textIsSelectable="false" />
+        
+    </LinearLayout>
+    
+
+    <ListView
+        android:id="@+id/lvShowTracks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

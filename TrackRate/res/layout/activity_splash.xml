@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blue_base"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvTextTopSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Whats Your..."
+        android:textAppearance="@style/SplashHeader" />
+    
+    <ImageView
+        android:id="@+id/splashScr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:src="@drawable/trackrate_splash" />
+    
+    <TextView
+        android:id="@+id/tvTextButtomSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="TrackRate...?"
+        android:textAppearance="@style/SplashFooter" />
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GridLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/trackImagethumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/ivListTrackImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>    
+
+    <TextView
+        android:id="@+id/tvListTrackName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listRatingBar"
+        android:layout_toRightOf="@+id/trackImagethumbnail"
+        android:paddingBottom="10dp"
+        android:text="Large Text"
+        android:textAppearance="@style/ListHeader" />
+    
+    <TextView
+        android:id="@+id/tvListRateCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listRatingBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="RateCount"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/ListItemSmall" />
+
+    <TextView
+        android:id="@+id/tvListTrackLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvListUserName"
+        android:layout_alignBottom="@+id/tvListUserName"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="Distance"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/ListItemMedium" />
+
+    <RatingBar
+        android:id="@+id/listRatingBar"
+        style="@android:style/Widget.Holo.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/trackImagethumbnail"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/tvListRateCount"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/tvListUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/trackImagethumbnail"
+        android:layout_alignLeft="@+id/listRatingBar"
+        android:text="UserName"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/ListItemMedium" />
+
+</RelativeLayout>

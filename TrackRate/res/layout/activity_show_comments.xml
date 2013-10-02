@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_desc"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+        <View style="@style/TitleBarSpring" />
+
+        <ProgressBar
+            android:id="@+id/title_refresh_progress"
+            style="@style/TitleBarProgressIndicator"
+            android:visibility="gone" />
+
+        <ImageView
+            style="@style/TitleBarSeparator"
+            android:contentDescription="@string/title_separator_desc" />
+        
+        
+
+        
+    </LinearLayout>
+  
+
+    <ListView
+        android:id="@+id/lvShowComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    
+    <TextView 
+        android:id="@+id/tvEmptyList"
+        android:textAppearance="@style/DialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Track not rated yet"
+        android:visibility="gone"/>
+
+</LinearLayout>

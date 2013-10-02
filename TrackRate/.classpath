@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="src" path="endpoint-libs/libtracksendpoint-v1/tracksendpoint/tracksendpoint-v1-generated-source"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Program Files/Android Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.7.6/appengine-java-sdk-1.7.6/lib/appengine-tools-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program%20Files/Android%20Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.7.6/appengine-java-sdk-1.7.6/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/Android Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/lib/appengine-tools-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Program%20Files/Android%20Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.7.7.1/appengine-java-sdk-1.7.7.1/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

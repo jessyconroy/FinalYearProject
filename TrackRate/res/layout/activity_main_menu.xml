@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_base"
+    tools:context=".MainMenuActivity" >
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_desc"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvUserNameTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/UserNameTag"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/title_text" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/title_text" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+        	android:layout_height="65dp"
+            android:id="@+id/btnLogOut"
+            style="@style/ButtonText"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:onClick="logOut"
+            android:text="@string/logOut_btn" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+        	android:layout_height="65dp"
+            android:id="@+id/btnStartNewTrack"
+            style="@style/ButtonText"
+            android:layout_above="@+id/btnLogOut"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:onClick="startTracking"
+            android:src="@drawable/hiking"
+            android:text="@string/startNewTrack_btn" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+        	android:layout_height="65dp"
+            android:id="@+id/btnShowMyTracks"
+            style="@style/ButtonText"
+            android:layout_below="@+id/btnShowAllTracks"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="15dp"
+            android:onClick="showMyTracks"
+            android:src="@drawable/show_my_tracks"
+            android:text="@string/showMyTracks_btn" />
+
+        <ImageButton
+            android:id="@+id/btnShowAllTracks"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="30dp"
+            android:onClick="showAllTracks"
+            android:src="@drawable/top_rated"
+            android:text="@string/showAllTracks_btn" />
+
+    </RelativeLayout>
+
+</LinearLayout>
